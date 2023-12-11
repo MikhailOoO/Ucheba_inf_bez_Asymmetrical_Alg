@@ -7,7 +7,7 @@ public class CRC16 {
         int crc = INITIAL_VALUE;
 
         for (byte b : data) {
-            int currentByte = b & 0xFF;
+            int currentByte = b;
             crc ^= currentByte << 8;
 
             for (int i = 0; i < 8; i++) {
